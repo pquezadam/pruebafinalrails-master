@@ -1,0 +1,12 @@
+<table class="table">
+<% @completeds.each do |completed| %>
+<tr>    
+    <td> <%= completed.todo.name %> </td>
+    <td> <%= completed.todo.task %> </td>
+</tr>    
+<% end %>
+<tr>
+    <td> Detalle : </td>
+    <td> <%= @completeds.map{|completed| completed.todo.task}.sum %></td>
+</tr>
+</table>
